@@ -2,7 +2,7 @@ var HyperLogLog = require('./lib/hyperLogLog');
 var CountMinSketch = require('./lib/countMinSketch');
 
 exports.createUniquesCounter = createUniquesCounter;
-exports.createViewsCounter = createViewsCounter;
+exports.createFrequenciesCounter = createFrequenciesCounter;
 exports.getUniquesObjSize = getUniquesObjSize;
 exports.getViewsObjSize = getViewsObjSize;
 exports.HyperLogLog = HyperLogLog;
@@ -39,7 +39,7 @@ function createUniquesCounter(stdError) {
  *                 with errFactor, controls the accuracy / memory usage
  *                 tradeoff. 0.0001 is the default.
  */
-function createViewsCounter(topEntryCount, errFactor, failRate) {
+function createFrequenciesCounter(topEntryCount, errFactor, failRate) {
   return new CountMinSketch(topEntryCount, errFactor || 0.002, failRate || 0.0001);
 }
 
