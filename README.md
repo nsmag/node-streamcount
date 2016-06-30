@@ -41,7 +41,7 @@ console.log(uniques.count());
 
 
 // Create a stream counter to track the top 3 pages viewed on our site.
-var pageCounts = streamcount.createViewsCounter(3);
+var pageCounts = streamcount.createFrequenciesCounter(3);
 
 // Add some observations
 pageCounts.increment('/');
@@ -76,8 +76,8 @@ __Arguments__
   rate. This controls the accuracy / memory usage tradeoff. 0.01 is the
   default.
 
-<a name="createViewsCounter" />
-### createViewsCounter
+<a name="createFrequenciesCounter" />
+### createFrequenciesCounter
 
 Creates an object for tracking estimated top view counts for many unique
 IDs. A common example is tracking the most viewed products on a website.
@@ -118,9 +118,9 @@ JavaScript uses 64-bit numbers.
 
 __Arguments__
 
-* errFactor - Parameter to createViewsCounter() to estimate storage
+* errFactor - Parameter to createFrequenciesCounter() to estimate storage
   requirements for.
-* failRate - Parameter to createViewsCounter() to estimate storage requirements
+* failRate - Parameter to createFrequenciesCounter() to estimate storage requirements
   for.
 
 ## HyperLogLog Documentation
@@ -190,7 +190,7 @@ __Arguments__
 ### CountMinSketch
 
 Initializes a CountMinSketch object. Takes the same parameters as
-[createViewsCounter](#createViewsCounter).
+[createFrequenciesCounter](#createFrequenciesCounter).
 
 __Example__
 
