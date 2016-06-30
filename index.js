@@ -63,7 +63,7 @@ function getUniquesObjSize(stdError) {
  * usage will be higher than this number since we serialize 32-bit integers but
  * JavaScript uses 64-bit numbers.
  */
-function getViewsObjSize(errFactor, failRate) {
+function getFrequenciesObjSize(errFactor, failRate) {
   var depth = Math.max(Math.ceil(Math.log(1.0 / failRate)), 1);
   var width = Math.ceil(Math.E / errFactor);
   return 4 + 8 + depth * width * 4 + 4 + depth * 4 + 4;
