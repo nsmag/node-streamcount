@@ -106,8 +106,8 @@ __Arguments__
 * stdError - Parameter to createUniquesCounter() to estimate storage
   requirements for.
 
-<a name="getViewsObjSize" />
-### getViewsObjSize
+<a name="getFrequenciesObjSize" />
+### getFrequenciesObjSize
 
 Returns the serialized size of a views counter (CountMinSketch) object in
 bytes given an errFactor and failRate. __NOTE:__ This does not include the size
